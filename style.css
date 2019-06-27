@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'nosiferregular';
+  src: url('font/nosifer-regular-webfont.woff2') format('woff2'),
+    url('font/nosifer-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'press_start_2pregular';
+  src: url('font/pressstart2p-regular-webfont.woff2') format('woff2'),
+    url('font/pressstart2p-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url(img/galaxy.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro {
+
+  top: 30%;
+  left: 50%;
+  font-family: 'press_start_2pregular';
+  font-size: 200%;
+  color: white;
+  opacity: 0;
+  animation: intro 6s ease-out 1s;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.logo {
+  top: 30%;
+  left: 50%;
+  animation: logo 10s ease-out 10s;
+  opacity: 0;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+p {
+  color: white;
+}
+
+#crawl {
+  font-family: 'press_start_2pregular';
+  position: relative;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  overflow: hidden;
+}
+
+#content {
+  animation: scroll 100s linear 16s;
+  position: absolute;
+  top: 100%;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
